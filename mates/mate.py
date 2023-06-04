@@ -1,5 +1,4 @@
-from mate.bombilla import Bombilla
-
+from mates.bombilla import Bombilla
 class Mate(Bombilla):
     
     def __init__(self, capacidad=None, tipo=None):
@@ -9,10 +8,10 @@ class Mate(Bombilla):
     def fabricarMate(self, codigoMate, nombreMate, codigoBombilla):
         self.codigoBombilla = codigoBombilla
         myBombilla = Bombilla()
-        Bombilla1 = myBombilla.obtenerBombilla(self.codigoBombilla)
+        bombilla1 = myBombilla.obtenerBombilla(self.codigoBombilla)
 
         with open('./mates/recursos/listaMates.txt', 'a') as nuevoMate:
-            data= f'{codigoMate}|{nombreMate}|{self.tipo}|{self.capacidad}|{bombilla1[0]}|'
+            data = f'{codigoMate}|{nombreMate}|{self.tipo}|{self.capacidad}|{bombilla1[0]}|'
             nuevoMate.write(data)
             nuevoMate.close()
         print("Creamos un buen mate :)")
@@ -32,3 +31,4 @@ class Mate(Bombilla):
             else:
                 Mate.close()
                 return False
+                

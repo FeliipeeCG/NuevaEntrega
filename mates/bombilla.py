@@ -12,7 +12,7 @@ class Bombilla:
         return("Creamos una bombilla")
 
     def obtenerBombilla(self, codigoBombilla=None):
-        with open('./mates/recursos/listaBombilla.txt', 'r') as Bombillas:
+        with open('./mates/recursos/listaBombillas.txt', 'r') as Bombillas:
             for Bombilla in Bombillas:
                 detalles = Bombilla.split("|")
                 if codigoBombilla == detalles[0]:
