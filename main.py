@@ -1,4 +1,4 @@
-from mate.bombilla import Bombilla
+from mates.bombilla import Bombilla
 from mates.mate import Mate
 
 def creaBombilla():
