@@ -1,5 +1,4 @@
 class Bombilla:
-
     def __init__(self, material=None, origen=None):
         self.material = material
         self.origen = origen
