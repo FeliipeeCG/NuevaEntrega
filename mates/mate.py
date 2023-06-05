@@ -10,7 +10,7 @@ class Mate(Bombilla):
         myBombilla = Bombilla()
         bombilla1 = myBombilla.obtenerBombilla(self.codigoBombilla)
 
-        with open('./mates/recursos/listaMates.txt', 'a') as nuevoMate:
+        with open('./mates/recursos/listaMates.json', 'a') as nuevoMate:
             data = f'{codigoMate}|{nombreMate}|{self.tipo}|{self.capacidad}|{bombilla1[0]}|'
             nuevoMate.write(data)
             nuevoMate.close()
@@ -22,7 +22,7 @@ class Mate(Bombilla):
         print ("Gracias por tu compra!\n Ceba buenos mates en esa bestia!")
     
     def listarMates(self, tipo):
-        with open('./mates/recursos/listaMates.txt', 'r') as Mates:
+        with open('./mates/recursos/listaMates.json', 'r') as Mates:
             for Mates in Mates:
                 detalles = Mates.split("|")
                 if tipo == detalles[2]:
