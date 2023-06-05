@@ -1,4 +1,4 @@
-from mates.bombilla import Bombilla
+from bombilla import Bombilla
 class Mate(Bombilla):
     
     def __init__(self, capacidad=None, tipo=None):
