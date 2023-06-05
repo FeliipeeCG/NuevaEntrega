@@ -1,5 +1,4 @@
 from mates.bombilla import Bombilla
-from mates.mate import Mate
 
 def creaBombilla():
     newBombilla = Bombilla("Acero quirurgico","Cordoba")
