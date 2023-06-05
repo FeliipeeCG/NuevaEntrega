@@ -1,15 +1,15 @@
 class Bombilla:
-    
+
     def __init__(self, material=None, origen=None):
         self.material = material
         self.origen = origen
 
     def fabricarBombilla(self, codigoBombilla, nombreBombilla):
         with open('./mates/recursos/listaBombillas.json', 'a') as nuevaBombilla:
-            data= f'{codigoBombilla}|{nombreBombilla}|{self.material}|{self.origen}|'
+            data = f'{codigoBombilla}|{nombreBombilla}|{self.material}|{self.origen}|'
             nuevaBombilla.write(data)
             nuevaBombilla.close()
-        return("Creamos una bombilla")
+        return ("Creamos una bombilla")
 
     def obtenerBombilla(self, codigoBombilla=None):
         with open('./mates/recursos/listaBombillas.json', 'r') as Bombillas:

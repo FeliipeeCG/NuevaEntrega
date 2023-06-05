@@ -1,10 +1,11 @@
 from bombilla import Bombilla
+
+
 class Mate(Bombilla):
-    
     def __init__(self, capacidad=None, tipo=None):
-        self.tipo = tipo
         self.capacidad = capacidad
-    
+        self.tipo = tipo
+
     def fabricarMate(self, codigoMate, nombreMate, codigoBombilla):
         self.codigoBombilla = codigoBombilla
         myBombilla = Bombilla()
@@ -15,12 +16,12 @@ class Mate(Bombilla):
             nuevoMate.write(data)
             nuevoMate.close()
         print("Creamos un buen mate :)")
-    
+
     def comprarMate(self, tipo):
         self.listarMates(tipo)
         seleccion = input("Seleccionar codigo de Mate")
-        print ("Gracias por tu compra!\n Ceba buenos mates en esa bestia!")
-    
+        print("Gracias por tu compra!\n Ceba buenos mates en esa bestia!")
+
     def listarMates(self, tipo):
         with open('./mates/recursos/listaMates.json', 'r') as Mates:
             for Mates in Mates:
@@ -31,4 +32,3 @@ class Mate(Bombilla):
             else:
                 Mate.close()
                 return False
-                
