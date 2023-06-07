@@ -1,5 +1,6 @@
 from mates.bombilla import Bombilla
 from mates.mate import Mate
+# def para el main
 
 
 def creaBombilla():
@@ -15,7 +16,6 @@ def ComprarBombilla():
 def fabricarMate():
     newMate = Mate("De madera", "250ml")
     newMate.fabricarMate("MADERA", "MD250", "AQ-C")
-
 
     # fabricarMate()
 creaBombilla()
